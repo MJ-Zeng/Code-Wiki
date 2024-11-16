@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="referrer" content="no-referrer">
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
   <link rel="stylesheet" href="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.css">
 
-   <!-- GitTalk评论 -->
-   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <!-- GitTalk评论 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 
 
   <style>
@@ -24,15 +26,50 @@
       transform: translateX(-50%);
       text-align: center;
       padding: 10px 0;
-      transition: opacity 0.3s ease-in-out; /* 添加透明度过渡效果 */
-      opacity: 1; /* 初始透明度为1（完全可见） */
+      transition: opacity 0.3s ease-in-out;
+      /* 添加透明度过渡效果 */
+      opacity: 1;
+      /* 初始透明度为1（完全可见） */
     }
 
     #jinrishici-sentence {
-      font-family: 'Kaisei Opti', serif; /* 使用华文楷体 */
-      font-size: 1.4em; /* 增大字体大小 */
+      font-family: 'Kaisei Opti', serif;
+      /* 使用华文楷体 */
+      font-size: 1.4em;
+      /* 增大字体大小 */
       color: #333;
       display: inline-block;
+    }
+
+    /* 媒体查询：针对手机屏幕 */
+    @media (max-width: 768px) {
+      #header-container {
+        top: 0px;
+        /* 调整顶部距离 */
+        padding: 3px 0;
+        /* 调整内边距 */
+      }
+
+      #jinrishici-sentence {
+        font-size: 1em;
+        /* 减小字体大小 */
+      }
+
+      h1 span {
+        padding: 1px 2px;
+        /* 减小内边距 */
+        font-size: 1em;
+        /* 减小字体大小 */
+      }
+      .content {
+        left: 0;
+        max-width: 100vw;
+        position: static;
+        padding-top: 40px;
+        transition: transform .25s ease;
+    }
+
+
     }
 
     /* 加重描述 strong */
@@ -40,12 +77,12 @@
       color: rgb(239, 112, 96);
     }
 
-  
+
 
 
     .markdown-section code {
       border-radius: 2px;
-      font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+      font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
       font-size: 16px !important;
       margin: 0 2px;
       padding: 3px 5px;
@@ -54,7 +91,8 @@
       color: rgb(184, 101, 208);
     }
 
-    .markdown-section > div > img, .markdown-section pre {
+    .markdown-section>div>img,
+    .markdown-section pre {
       box-shadow: 2px 2px 20px 6px rgb(255, 255, 255) !important;
     }
 
@@ -62,20 +100,20 @@
       text-decoration: none;
     }
 
-    
-   
 
-    h1 span{
-      display:inline-block;
+
+
+    h1 span {
+      display: inline-block;
       background: rgb(66, 185, 131);
-      color:#ffffff;
-      padding:  10px  16px;
-      border-radius:5px;
+      color: #ffffff;
+      padding: 5px 8px;
+      border-radius: 5px;
       box-shadow: 1px 1px 3px black;
     }
 
     /*代码块背景*/
-    p code{
+    p code {
       background-color: rgb(255, 255, 255) !important;
     }
 
@@ -91,6 +129,7 @@
     .markdown-section h2 {
       margin: 2rem 0 1rem;
     }
+
     img,
     pre {
       border-radius: 5px;
@@ -103,10 +142,11 @@
       font-size: 13px !important;
     }
 
-    ::after{
+    ::after {
       color: #9da2fd !important;
       font-size: 13px !important;
     }
+
     .markdown-section>p {
       font-size: 16px !important;
     }
@@ -123,12 +163,13 @@
       background-color: #1C1C1C;
       background-position: 10px 10px;
     }
+
     /*代码块头部图标 end*/
 
     .markdown-section pre>code {
       color: #c0c3c1 !important;
-      font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
-      background-color: #212121 !important;   
+      font-family: 'Inconsolata', consolas, "PingFang SC", "Microsoft YaHei", monospace !important;
+      background-color: #212121 !important;
       font-size: 15px !important;
       white-space: pre !important;
       line-height: 1.5 !important;
@@ -138,10 +179,13 @@
       /*border-radius: .3em;*/
     }
 
-    ol, ul, li{
+    ol,
+    ul,
+    li {
       line-height: 27px !important;
       font-size: 16px !important;
     }
+
     @media (min-width:600px) {
       .markdown-section pre>code {
         font-size: 15px !important;
@@ -149,16 +193,20 @@
       }
 
     }
+
     @media (max-width:600px) {
       .markdown-section pre>code {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 16px !important;
       }
+
       pre:after {
         content: "" !important;
       }
+
     }
+
     section.cover h1 {
       margin: 0;
     }
@@ -190,7 +238,7 @@
         display: none;
       }
 
-      .advertisement{
+      .advertisement {
         display: none;
       }
 
@@ -206,49 +254,51 @@
     }
 
     /*修改代码块代码颜色显示*/
-    .token.directive.keyword{
+    .token.directive.keyword {
       color: #4faee2 !important;
     }
 
-    .token.keyword{
+    .token.keyword {
       color: #c678dd !important;
     }
 
-    .token.comment{
+    .token.comment {
       color: #737c8b !important;
     }
 
-    .token.tag{
+    .token.tag {
       color: #a589ad !important;
     }
 
-    .token.attr-name{
+    .token.attr-name {
       color: #de916c !important;
     }
 
-    .token.attr-value{
+    .token.attr-value {
       color: #4faee2 !important;
     }
 
-    .token.macro.property{
+    .token.macro.property {
       color: #4faee2 !important;
     }
 
-    .token.function{
+    .token.function {
       color: #e6b456 !important;
     }
-    .token.string{
+
+    .token.string {
       color: #98b755 !important;
     }
-    .token.punctuation{
+
+    .token.punctuation {
       color: #c0c3c1 !important;
     }
 
-    .token.number{
-      color:#c0c3c1  !important;
+    .token.number {
+      color: #c0c3c1 !important;
     }
 
-    a.section-link{
+    a.section-link {
       font-size: .9rem !important;
     }
 
@@ -278,16 +328,19 @@
 
     /*滚动条样式 start*/
     /* 滚动条宽度 */
-    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
     /* 滚动条颜色 */
-    ::-webkit-scrollbar-thumb{
+    ::-webkit-scrollbar-thumb {
       background: #33a9dc;
       background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
       border-radius: 2em;
     }
-
   </style>
 </head>
+
 <body>
   <div id="app">🏃‍🏃‍🏃‍💨 Loading...</div>
 
@@ -295,11 +348,12 @@
   <div id="header-container">
     <span id="jinrishici-sentence">正在加载今日诗词....</span>
   </div>
-  
+
   <script>
     window.$docsify = {
       name: 'Code Wiki',
       repo: 'https://github.com/MJ-Zeng/Code-Wiki',
+      notFoundPage: '404.md',
       auto2top: true,
       autoHeader: true,
       loadSidebar: true,
@@ -334,90 +388,99 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
-   <!-- 搜索 -->
+  <!-- 搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
 
 </body>
+
 </html>
 
-  <!-- LaTeX 显示引擎 -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
-  <!-- 外部脚本引用 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <!-- 支持 DOT 语言 -->
-  <script src="https://notebook.js.org/plugin/viz.js"></script>
-  <!-- 复制 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 放大图像 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<!-- LaTeX 显示引擎 -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+<!-- 外部脚本引用 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+<!-- 支持 DOT 语言 -->
+<script src="https://notebook.js.org/plugin/viz.js"></script>
+<!-- 复制 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+<!-- 放大图像 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
-   <!-- 回到顶部功能 -->
- <script src="https://notebook.js.org/plugin/jquery.js"></script>
- <script src="https://notebook.js.org/plugin/jquery.goup.js"></script>
- <script type="text/javascript">
-   $(document).ready(function () {
-     $.goup({
-       trigger: 100,
-       bottomOffset: 52,
-       locationOffset: 25,
-       //title: 'TOP',
-       titleAsText: true
-     });
-   });
- </script>
+<!-- 回到顶部功能 -->
+<script src="https://notebook.js.org/plugin/jquery.js"></script>
+<script src="https://notebook.js.org/plugin/jquery.goup.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.goup({
+      trigger: 100,
+      bottomOffset: 52,
+      locationOffset: 25,
+      //title: 'TOP',
+      titleAsText: true
+    });
+  });
+</script>
 
-  <!-- 代码块样式优化-->
-  <script src="https://notebook.js.org/plugin/prism-c.js"></script>
-  <!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
-  <script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-css.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-docker.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-java.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-javascript.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-json.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-latex.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-sql.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-markdown.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-bash.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-php.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-scala.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-nginx.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-json.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-markdown.min.js"></script>
-  <script src="https://notebook.js.org/plugin/prism-python.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
-  <script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
- 
- 
-  
- 
-  <!-- mouse click -->
-  <script src="https://notebook.js.org/plugin/click_heart.js"></script>
-
-  <!-- 今日诗词 -->
-  <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
-  <!-- 分页 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- 代码块样式优化-->
+<script src="https://notebook.js.org/plugin/prism-c.js"></script>
+<!--<script src="//unpkg.com/prismjs/components/prism-cpp.js"></script>-->
+<script src="https://notebook.js.org/plugin/prism-cpp.js"></script>
+<script src="https://notebook.js.org/plugin/prism-css.js"></script>
+<script src="https://notebook.js.org/plugin/prism-docker.js"></script>
+<script src="https://notebook.js.org/plugin/prism-java.js"></script>
+<script src="https://notebook.js.org/plugin/prism-javascript.js"></script>
+<script src="https://notebook.js.org/plugin/prism-json.js"></script>
+<script src="https://notebook.js.org/plugin/prism-latex.js"></script>
+<script src="https://notebook.js.org/plugin/prism-sql.js"></script>
+<script src="https://notebook.js.org/plugin/prism-markdown.js"></script>
+<script src="https://notebook.js.org/plugin/prism-bash.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-php.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-scala.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-nginx.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-json.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-markdown.min.js"></script>
+<script src="https://notebook.js.org/plugin/prism-python.js"></script>
+<script src="https://notebook.js.org/plugin/js/prism-yaml.js"></script>
+<script src="https://notebook.js.org/plugin/js/prism-go.js"></script>
+<script src="https://notebook.js.org/plugin/js/prism-matlab.js"></script>
 
 
-  <!-- 侧边栏折叠 -->
-  <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
-  <!-- 远程加载md -->
-  <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
 
-  <!-- 网站访问量 -->
-  <script src="https://unpkg.com/docsify-busuanzi@1.0.1/dist/docsify-busuanzi.min.js"></script>
+<!-- mouse click -->
+<script src="https://notebook.js.org/plugin/click_heart.js"></script>
 
-  
- <!-- 百度统计 -->
- <!-- <script src="https://unpkg.com/docsify-baidu-tj@1.0.2/dist/docsify-baidu-tj.min.js"></script> -->
+<!-- 今日诗词 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-  <!-- GitTalk评论 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://unpkg.com/docsify-gitalk@1.0.0/dist/docsify-gitalk.min.js"></script>
+<!-- 分页 -->
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+
+<!-- 侧边栏折叠 -->
+<script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+<!-- 远程加载md -->
+<script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
+
+<!-- 网站访问量 -->
+<script src="https://unpkg.com/docsify-busuanzi@1.0.1/dist/docsify-busuanzi.min.js"></script>
+
+
+<!-- 百度统计 -->
+<!-- <script src="https://unpkg.com/docsify-baidu-tj@1.0.2/dist/docsify-baidu-tj.min.js"></script> -->
+
+<!-- GitTalk评论 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script src="https://unpkg.com/docsify-gitalk@1.0.0/dist/docsify-gitalk.min.js"></script>
+
+<!-- PWN 离线缓存 -->
+
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
