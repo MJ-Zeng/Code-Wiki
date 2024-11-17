@@ -143,6 +143,7 @@
 
 请通过 @MJ-Zeng 初始化创建。
 
+![公众号](https://gitee.com/PussIn/my-images/raw/master/info.jpg)
 
 ---
 

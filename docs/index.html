@@ -348,6 +348,15 @@
   <div id="header-container">
     <span id="jinrishici-sentence">正在加载今日诗词....</span>
   </div>
+  
+  <!-- <div class="aside_container">
+    <div class="advertisement">
+      <div class="Tencent_code">
+        <h4>关注公众号</h4>
+        <img src="https://gitee.com/PussIn/my-images/raw/master/info.jpg" alt="EnjoyToShare" />
+      </div>
+    </div> -->
+
 
   <script>
     window.$docsify = {
@@ -358,6 +367,7 @@
       autoHeader: true,
       loadSidebar: true,
       subMaxLevel: 5,
+      executeScript: true,  // 启用执行嵌入的脚本
       search: {
         noData: {
           '/': '😒 找不到结果'
@@ -379,9 +389,10 @@
         id: location.pathname,
         distractionFreeMode: false, // 是否启用无干扰模式
       },
-
-
     };
+
+  
+    
   </script>
   <!-- <script src="//unpkg.com/docsify/lib/docsify.min.js"></script> -->
 

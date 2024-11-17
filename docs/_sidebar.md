@@ -28,6 +28,8 @@
   - [网络攻防](/contests/cybersecurity/)
   - [大数据](/contests/big-data/)
 -  [:file_folder: 杂项](/miscellaneous/)
+<!-- -  [:calling: AIchat](/AIchat/README.md) -->
+  
   <!-- - [资源链接](/miscellaneous/resources/)
   - [常见问题](/miscellaneous/faq/)
   - [社区讨论](/miscellaneous/community/) -->
