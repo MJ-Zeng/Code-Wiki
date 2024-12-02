@@ -1,5 +1,5 @@
 <!-- _navbar.md -->
-<!-- _navbar.md -->
+-  [:beginner: 科创工坊](/tec-lab/)
 -  [:book: 阅读](/reading/)
   - [社会学](/reading/social/_sidebar.md)
   - [历史](/reading/history/)

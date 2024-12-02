@@ -1,4 +1,10 @@
 - [1.Model Assessment](/ai/machine-learning/1-Model-Assessment.md)
 - [2.Matrix Differentiation](/ai/machine-learning/2-Matrix-Differentiation.md)
 - [3.Linear Regression](/ai/machine-learning/3-Linear-Regression.md)
-- [4.KNN](/ai/machine-learning/4-KNN.md)
+- [4.Bias-Variance Decomposition](/ai/machine-learning/4-Bias-Variance%20Decomposition.md)
+- [5.Regularize](/ai/machine-learning/4-Bias-Variance%20Decomposition.md)
+- [6.Ridge Regression](/ai/machine-learning/6-Ridge-Regression.md)
+- [7.Lasso Regression](/ai/machine-learning/7-Lasso-Regression.md)
+- [8.KNN](/ai/machine-learning/8-KNN.md)
+- [9.Decision Tree](/ai/machine-learning/9-Decision%20Tree.md)
+
