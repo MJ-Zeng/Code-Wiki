@@ -17,7 +17,7 @@
   - [计算机网络](/computer-basics/computer-networks/)
   - [Linux 操作系统](/computer-basics/linux-os/)
 -  [:snake: 编程语言](/programming-languages/)
-  - [Python](/programming-languages/python/)
+  - [Python](/programming-languages/python/_sidebar.md)
   - [Java](/programming-languages/java/)
 -  [:hammer_and_wrench: 前-后端](/frontend-backend/)
 -  [:control_knobs: 硬件](/hardware/)
